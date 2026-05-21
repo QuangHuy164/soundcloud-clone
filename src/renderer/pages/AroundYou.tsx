@@ -1,10 +1,7 @@
-/* eslint-disable prettier/prettier */
-import React from 'react'
+import React from 'react';
 
-function AroundYou() {
-  return (
-    <div>AroundYou</div>
-  )
-}
+const AroundYou = () => {
+  return <div>AroundYou</div>;
+};
 
-export default AroundYou
+export default AroundYou;

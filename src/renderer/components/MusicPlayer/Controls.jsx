@@ -7,7 +7,7 @@ import {
   BsShuffle,
 } from 'react-icons/bs';
 
-function Controls ({
+function Controls({
   isPlaying,
   repeat,
   setRepeat,
@@ -62,7 +62,7 @@ function Controls ({
       onClick={() => setShuffle((prev) => !prev)}
       className="hidden sm:block cursor-pointer"
     />
-  </div>
-};
+  </div>;
+}
 
 export default Controls;
