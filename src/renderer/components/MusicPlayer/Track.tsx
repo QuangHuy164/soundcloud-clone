@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Track = ({ isPlaying, isActive, activeSong }) => (
+interface TrackProps {
+  // eslint-disable-next-line prettier/prettier
+  isPlaying: () => void;
+  isActive: () => void;
+  activeSong: () => void;
+}
+
+const Track = ({ isPlaying, isActive, activeSong }: TrackProps) => (
   <div className="flex-1 flex items-center justify-start">
     <div
       className={`${isPlaying && isActive ? 'animate-[spin_3s_linear_infinite]' : ''} hidden sm:block h-16 w-16 mr-4`}

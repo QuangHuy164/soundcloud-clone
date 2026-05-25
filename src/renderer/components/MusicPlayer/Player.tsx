@@ -44,23 +44,22 @@ const Player = ({
   }, [seekTime, ref]);
 
   return (
-    <audio src={activeSong?.hub?.actions[1]?.uri}
+    <audio
+      src={activeSong?.hub?.actions[1]?.uri}
       ref={ref}
       loop={repeat}
       onEnded={onEnded}
       onTimeUpdate={onTimeUpdate}
-      onLoadedData={onLoadedData}>
-        
-      <track 
-        kind="captions" 
-        src="path/to/lyrics.vtt" 
-        srcLang="en" 
-        label="English Lyrics" 
-        default 
+      onLoadedData={onLoadedData}
+    >
+      <track
+        kind="captions"
+        src="path/to/lyrics.vtt"
+        srcLang="en"
+        label="English Lyrics"
+        default
       />
     </audio>
-     
-    
   );
 };
 

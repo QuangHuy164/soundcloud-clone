@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 
 import PlayPause from './PlayPause';
 
+interface SongBarProps {
+  song: string;
+  i: any;
+  artistId: string;
+  isPlaying: () => void;
+  activeSong: any;
+  handlePauseClick: () => void;
+  handlePlayClick: () => void;
+}
+
 const SongBar = ({
   song,
   i,
@@ -11,7 +21,7 @@ const SongBar = ({
   activeSong,
   handlePauseClick,
   handlePlayClick,
-}) => (
+}: SongBarProps) => (
   <div
     className={`w-full flex flex-row items-center hover:bg-[#4c426e] ${activeSong?.title === song?.title ? 'bg-[#4c426e]' : 'bg-transparent'} py-2 p-4 rounded-lg cursor-pointer mb-2`}
   >

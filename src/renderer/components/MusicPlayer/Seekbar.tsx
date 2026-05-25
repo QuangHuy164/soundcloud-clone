@@ -10,7 +10,14 @@ interface SeekbarProps {
   appTime: number;
 }
 
-const Seekbar = ({ value, min, max, onInput, setSeekTime, appTime }:SeekbarProps) => {
+const Seekbar = ({
+  value,
+  min,
+  max,
+  onInput,
+  setSeekTime,
+  appTime,
+}: SeekbarProps) => {
   // converts the time to format 0:00
   const getTime = (time) =>
     `${Math.floor(time / 60)}:${`0${Math.floor(time % 60)}`.slice(-2)}`;
