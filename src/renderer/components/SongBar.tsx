@@ -1,16 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import PlayPause from './PlayPause';
+import { PlayPause } from './PlayPause';
 
 interface SongBarProps {
-  song: string;
-  i: any;
+  song: {
+    title?: string;
+    subtitle?: string;
+    key?: string;
+    images?: {
+      coverart?: string;
+    };
+    attributes?: {
+      name?: string;
+      albumName?: string;
+      artwork?: {
+        url?: string;
+      };
+    };
+  };
+  i: number;
   artistId: string;
-  isPlaying: () => void;
+  isPlaying: boolean;
   activeSong: any;
   handlePauseClick: () => void;
-  handlePlayClick: () => void;
+  handlePlayClick: (song: {}, index: number) => void;
 }
 
 const SongBar = ({
@@ -32,8 +46,8 @@ const SongBar = ({
         src={
           artistId
             ? song?.attributes?.artwork?.url
-                .replace('{w}', '125')
-                .replace('{h}', '125')
+                ?.replace('{w}', '125')
+                ?.replace('{h}', '125')
             : song?.images?.coverart
         }
         alt={song?.title}

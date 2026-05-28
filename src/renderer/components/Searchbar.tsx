@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Searchbar = () =>  {
-  return <div>Searchbar</div>;
+  return <div className='text-white'>Searchbar</div>;
 };
 
 export default Searchbar;

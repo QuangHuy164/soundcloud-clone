@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
   position: relative;
   color: white;
   height: 100vh;
@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 /* 
 
 button {

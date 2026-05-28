@@ -4,3 +4,7 @@ import autoprefixer from 'autoprefixer';
 export default {
   plugins: [tailwindcss('./tailwind.config.js'), autoprefixer],
 };
+
+module.exports = {
+  plugins: [require('tailwindcss'), require('autoprefixer')],
+};
