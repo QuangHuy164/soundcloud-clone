@@ -16,6 +16,9 @@ const Discover = () => {
         {genres.map((genre)=> <option key={genre.value} value={genre.value}>{genre.title}</option> )}
       </select>
     </div>
+    <div className='flex flex-wrap sm:justify-start justify-center gap-8'>
+    Hello
+    </div>
   </div>)
 };
 

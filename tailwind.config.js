@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/renderer/**/*.{js,jsx,ts,tsx,ejs,html}'],
+  content: [
+    './src/renderer/**/*.{js,jsx,ts,tsx,ejs,html}',
+    './public/index.html',
+    './src/**/*.{js,jsx,ts,tsx,ejs,html}',
+  ],
   rules: {
     'at-rule-no-unknown': [
       true,
