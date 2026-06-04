@@ -21,9 +21,11 @@ const App = () => {
 
       <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
         <Searchbar />
-
-        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse justify-between gap-6">
-          <div className="flex-1 h-fit pb-40">
+        <div className="xl:sticky relative top-0 h-fit flex-1 flex flex-col">
+          <TopPlay />
+        </div>
+        <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar">
+          <div className="h-fit pb-40">
             <Routes>
               <Route path="/" element={<Discover />} />
               <Route path="/top-artists" element={<TopArtists />} />
@@ -33,9 +35,6 @@ const App = () => {
               <Route path="/songs/:songid" element={<SongDetails />} />
               <Route path="/search/:searchTerm" element={<Search />} />
             </Routes>
-          </div>
-          <div className="xl:sticky relative top-0 h-fit flex-1 flex flex-col">
-            <TopPlay />
           </div>
         </div>
       </div>
